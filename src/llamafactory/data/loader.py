@@ -52,17 +52,16 @@ def _load_single_dataset(
     Loads a single dataset and aligns it to the standard format.
     """
     logger.info_rank0(f"Loading dataset {dataset_attr}...")
+    
     data_path, data_name, data_dir, data_files = None, None, None, None
     if dataset_attr.load_from in ["hf_hub", "ms_hub", "om_hub"]:
         data_path = dataset_attr.dataset_name
         data_name = dataset_attr.subset
         data_dir = dataset_attr.folder
-
     elif dataset_attr.load_from == "script":
         data_path = os.path.join(data_args.dataset_dir, dataset_attr.dataset_name)
         data_name = dataset_attr.subset
         data_dir = dataset_attr.folder
-
     elif dataset_attr.load_from == "file":
         data_files = []
         local_path = os.path.join(data_args.dataset_dir, dataset_attr.dataset_name)
@@ -101,7 +100,6 @@ def _load_single_dataset(
         )
         if isinstance(dataset, MsDataset):
             dataset = dataset.to_hf_dataset()
-
     elif dataset_attr.load_from == "om_hub":
         require_version("openmind>=0.8.0", "To fix: pip install openmind>=0.8.0")
         from openmind import OmDataset  # type: ignore
