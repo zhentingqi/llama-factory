@@ -17,7 +17,7 @@ def beautify_large_number(large_number: int) -> str:
     return f"{large_number}"
 
 
-root = "/n/netscratch/glassman_lab/Lab/zhentingqi/big_data/hf_datasets/OpenMathInstruct2-ScaleQuest"
+root = "./hf_datasets/OpenMathInstruct2-ScaleQuest"
 src_file = os.path.join(root, "data.jsonl")
 tgt_dir = os.path.join(root, "formatted_data")
 
