@@ -16,7 +16,7 @@ overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: /n/netscratch/glassman_lab/Lab/zhentingqi/my_projects/overtraining/llamafactory_out
+output_dir: ./llamafactory_out
 logging_steps: 10
 save_steps: 500
 plot_loss: false

@@ -632,8 +632,5 @@
       "prompt": "content"
     },
     "folder": "python"
-  },
-  "combined_100K": {
-    "file_name": "/n/netscratch/glassman_lab/Lab/zhentingqi/big_data/hf_datasets/OpenMathInstruct2-ScaleQuest/formatted_data/train_100K"
   }
 }
